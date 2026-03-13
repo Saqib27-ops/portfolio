@@ -397,5 +397,5 @@ window.addEventListener('scroll', () => {
 const footerYear = document.querySelector('.footer-bottom p:first-child');
 if (footerYear) {
     const year = new Date().getFullYear();
-    footerYear.innerHTML = `&copy; ${year} riley chen. all rights reserved.`;
+    footerYear.innerHTML = ` ${year} saqib manzoor dar. all rights reserved.`;
 }
