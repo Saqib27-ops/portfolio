@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riley Chen · creative developer</title>
+    <!-- Google Fonts + Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- AOS (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- particle canvas background (dynamic) -->
+    <canvas id="particle-canvas"></canvas>
+    
+    <!-- custom cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">R.C <span class="logo-dot">✦</span></a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">home</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#blog">blog</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="#" class="theme-toggle"><i class="fa-regular fa-moon"></i></a>
+                <div class="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HOME SECTION with background image and social icons -->
+    <section id="home" class="section home">
+        <div class="home-background">
+            <div class="overlay"></div>
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="coding workspace">
+        </div>
+        <div class="container home-content">
+            <div class="home-text" data-aos="fade-up" data-aos-duration="1000">
+                <span class="home-badge">👋 available for freelance</span>
+                <h1 class="glitch" data-text="Riley Chen">Riley Chen</h1>
+                <h2>creative <span class="typed-text"></span><span class="cursor-type">|</span></h2>
+                <p>crafting digital experiences with code & creativity</p>
+                <div class="home-buttons">
+                    <a href="#projects" class="btn primary">view work <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn outline">let's talk</a>
+                </div>
+                <div class="home-social">
+                    <a href="#" class="social-icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-dribbble"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-codepen"></i></a>
+                </div>
+            </div>
+            <div class="home-stats" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="stat-card">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">years experience</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">projects done</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">happy clients</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION with progress bars and icons -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">what i do best</span>
+                <h2 class="section-title">technical <span>expertise</span></h2>
+                <div class="title-border"></div>
+            </div>
+
+            <div class="skills-wrapper">
+                <div class="skills-left" data-aos="fade-right">
+                    <div class="skill-category">
+                        <h3>frontend development</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <i class="fa-brands fa-react"></i>
+                                    <span>react / next.js</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <i class="fa-brands fa-vuejs"></i>
+                                    <span>vue / nuxt</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <i class="fa-brands fa-js"></i>
+                                    <span>javascript / typescript</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <i class="fa-brands fa-html5"></i>
+                                    <span>html5 / css3 / sass</span>
+                                    <span class="skill-percent">92%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-right" data-aos="fade-left">
+                    <div class="skill-category">
+                        <h3>backend & tools</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <i class="fa-brands fa-node"></i>
+                                    <span>node.js / express</span>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <i class="fa-solid fa-database"></i>
+                                    <span>mongodb / postgresql</span>
+                                    <span class="skill-percent">82%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 82%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <i class="fa-brands fa-python"></i>
+                                    <span>python / django</span>
+                                    <span class="skill-percent">75%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <i class="fa-brands fa-git-alt"></i>
+                                    <span>git / docker / aws</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-cloud" data-aos="zoom-in">
+                <span class="cloud-tag" style="--i:1">react</span>
+                <span class="cloud-tag" style="--i:2">vue</span>
+                <span class="cloud-tag" style="--i:3">node</span>
+                <span class="cloud-tag" style="--i:4">typescript</span>
+                <span class="cloud-tag" style="--i:5">python</span>
+                <span class="cloud-tag" style="--i:6">graphql</span>
+                <span class="cloud-tag" style="--i:7">mongodb</span>
+                <span class="cloud-tag" style="--i:8">docker</span>
+                <span class="cloud-tag" style="--i:9">aws</span>
+                <span class="cloud-tag" style="--i:10">tailwind</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION with filter and cards -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">my recent work</span>
+                <h2 class="section-title">featured <span>projects</span></h2>
+                <div class="title-border"></div>
+            </div>
+
+            <div class="project-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">all</button>
+                <button class="filter-btn" data-filter="frontend">frontend</button>
+                <button class="filter-btn" data-filter="fullstack">fullstack</button>
+                <button class="filter-btn" data-filter="mobile">mobile</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- project cards will be populated by js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION (developer page) -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-image" data-aos="fade-right">
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1007&q=80" alt="developer workspace">
+                        <div class="experience-badge">
+                            <span class="years">5+</span>
+                            <span>years of<br>experience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content" data-aos="fade-left">
+                    <span class="section-subtitle">who am i</span>
+                    <h2>developer & creative problem solver</h2>
+                    <p class="about-text">i'm riley, a full-stack developer passionate about building beautiful, functional, and user-centered digital experiences. with over 5 years in the industry, i've worked with startups and agencies to bring ideas to life.</p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>hello@riley.dev</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-regular fa-map"></i>
+                            <span>new york / remote</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-regular fa-calendar"></i>
+                            <span>available for work</span>
+                        </div>
+                    </div>
+                    <div class="about-buttons">
+                        <a href="#" class="btn primary">download resume <i class="fa-regular fa-file-pdf"></i></a>
+                        <a href="#contact" class="btn outline">contact me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG SECTION (new webpage) -->
+    <section id="blog" class="section blog">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">latest articles</span>
+                <h2 class="section-title">from the <span>blog</span></h2>
+                <div class="title-border"></div>
+            </div>
+
+            <div class="blog-grid">
+                <article class="blog-card" data-aos="fade-up">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" alt="coding">
+                        <span class="blog-category">development</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-regular fa-calendar"></i> mar 15, 2025</span>
+                            <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h3>modern css techniques you should know</h3>
+                        <p>exploring container queries, :has() selector, and cascade layers</p>
+                        <a href="#" class="read-more">read article <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1555066931-bf19f8fd1085?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80" alt="react">
+                        <span class="blog-category">react</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-regular fa-calendar"></i> feb 28, 2025</span>
+                            <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+                        </div>
+                        <h3>building performant react apps</h3>
+                        <p>tips for optimization, code splitting, and memoization</p>
+                        <a href="#" class="read-more">read article <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="design">
+                        <span class="blog-category">design</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-regular fa-calendar"></i> jan 10, 2025</span>
+                            <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h3>design systems for developers</h3>
+                        <p>bridging the gap between design and development</p>
+                        <a href="#" class="read-more">read article <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION with map and form -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">get in touch</span>
+                <h2 class="section-title">let's work <span>together</span></h2>
+                <div class="title-border"></div>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info-side" data-aos="fade-right">
+                    <div class="contact-card">
+                        <h3>contact information</h3>
+                        <div class="contact-details">
+                            <div class="detail-item">
+                                <i class="fa-regular fa-envelope"></i>
+                                <div>
+                                    <span>email</span>
+                                    <p>hello@riley.dev</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-regular fa-phone"></i>
+                                <div>
+                                    <span>phone</span>
+                                    <p>+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-regular fa-location-dot"></i>
+                                <div>
+                                    <span>location</span>
+                                    <p>new york, usa</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-social">
+                            <h4>follow me</h4>
+                            <div class="social-links">
+                                <a href="#"><i class="fa-brands fa-github"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-side" data-aos="fade-left">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" required>
+                                <label for="name">your name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" required>
+                                <label for="email">email address</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" required>
+                            <label for="subject">subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" required></textarea>
+                            <label for="message">your message</label>
+                        </div>
+                        <button type="submit" class="btn primary submit-btn">send message <i class="fa-regular fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">Riley Chen</a>
+                    <p>creating digital experiences that matter</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>navigation</h4>
+                        <ul>
+                            <li><a href="#home">home</a></li>
+                            <li><a href="#skills">skills</a></li>
+                            <li><a href="#projects">projects</a></li>
+                            <li><a href="#about">about</a></li>
+                            <li><a href="#blog">blog</a></li>
+                            <li><a href="#contact">contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>projects</h4>
+                        <ul>
+                            <li><a href="#">vivid dashboard</a></li>
+                            <li><a href="#">flow space</a></li>
+                            <li><a href="#">eatsy recipe</a></li>
+                            <li><a href="#">weather app</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>resources</h4>
+                        <ul>
+                            <li><a href="#">blog</a></li>
+                            <li><a href="#">github</a></li>
+                            <li><a href="#">resume</a></li>
+                            <li><a href="#">certificates</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 riley chen. all rights reserved.</p>
+                <p>built with <i class="fa-regular fa-heart"></i> by riley</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- back to top button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
